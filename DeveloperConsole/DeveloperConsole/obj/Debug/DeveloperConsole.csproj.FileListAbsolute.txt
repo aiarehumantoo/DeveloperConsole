@@ -1,0 +1,7 @@
+D:\Program Files\Unity projects\DeveloperConsole\DeveloperConsole\DeveloperConsole\bin\Debug\DeveloperConsole.exe.config
+D:\Program Files\Unity projects\DeveloperConsole\DeveloperConsole\DeveloperConsole\bin\Debug\DeveloperConsole.exe
+D:\Program Files\Unity projects\DeveloperConsole\DeveloperConsole\DeveloperConsole\bin\Debug\DeveloperConsole.pdb
+D:\Program Files\Unity projects\DeveloperConsole\DeveloperConsole\DeveloperConsole\obj\Debug\DeveloperConsole.csprojAssemblyReference.cache
+D:\Program Files\Unity projects\DeveloperConsole\DeveloperConsole\DeveloperConsole\obj\Debug\DeveloperConsole.csproj.CoreCompileInputs.cache
+D:\Program Files\Unity projects\DeveloperConsole\DeveloperConsole\DeveloperConsole\obj\Debug\DeveloperConsole.exe
+D:\Program Files\Unity projects\DeveloperConsole\DeveloperConsole\DeveloperConsole\obj\Debug\DeveloperConsole.pdb
