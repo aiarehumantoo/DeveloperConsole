@@ -21,15 +21,17 @@ namespace DeveloperConsole
             Console.WriteLine("Waiting for connection...");
             using (Socket client = server.Accept()) // Waits for connection before proceeding
             {
+                Console.WriteLine("Connected...");
                 while (true)
                 {
-                    string s = Console.ReadLine().ToUpper();
+                    string s = Console.ReadLine().ToUpper(); // message is all caps
 
                     if (s.Equals("QUIT"))
                     {
                         break;
                     }
 
+#if false
                     // Do not send line if empty
                     if (!s.Equals(""))
                     {
@@ -54,6 +56,27 @@ namespace DeveloperConsole
                             var messageString = Encoding.ASCII.GetString(buffer);
                             Console.WriteLine("\n" +"List of console commands: \n" + messageString);
                             break;
+                        }
+                    }
+#endif
+                    // Send command, wait for reply
+                    if (!s.Equals(""))
+                    {
+                        // Send string
+                        byte[] send_buffer = Encoding.ASCII.GetBytes(s);
+                        client.SendTo(send_buffer, iep);
+
+                        while (true)
+                        {
+                            Console.WriteLine("Waiting for reply...");
+                            byte[] buffer = new byte[128]; // Max string size. New line if is exceeded      // rest of the message is added to next one if runs out of space?
+                            client.Receive(buffer, buffer.Length, SocketFlags.None);
+                            var messageString = Encoding.ASCII.GetString(buffer);
+                            Console.WriteLine(messageString);
+                            break;
+
+                            // OK // invalid // reply
+                            // or just reply / invalid command?
                         }
                     }
                 }
